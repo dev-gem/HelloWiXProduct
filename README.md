@@ -1,1 +1,1 @@
-# HelloWiXProduct
+# hello.gem
