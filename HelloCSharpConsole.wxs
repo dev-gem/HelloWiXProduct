@@ -1,14 +1,18 @@
 <?xml version="1.0"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-   <Product Id="*" UpgradeCode="12345678-1234-1234-1234-111111111111" 
-            Name="HelloCSharpConsole" Version="0.0.1" Manufacturer="Lou Parslow" Language="1033">
+   <Product Id="5435AED6-ED42-4EA0-BA79-F4B8C8E385CF" 
+            UpgradeCode="67C3F156-E14D-4BA3-BD28-9FE09A5FFD3D" 
+            Name="HelloCSharpConsole" 
+            Version="0.0.1" 
+            Manufacturer="Lou Parslow" 
+            Language="1033">
       <Package InstallerVersion="200" Compressed="yes" Comments="Windows Installer Package"/>
       <Media Id="1" Cabinet="product.cab" EmbedCab="yes"/>
  
       <Directory Id="TARGETDIR" Name="SourceDir">
          <Directory Id="ProgramFilesFolder">
             <Directory Id="INSTALLDIR" Name="HelloCSharpConsole">
-               <Component Id="ApplicationFiles" Guid="12345678-1234-1234-1234-222222222222">
+               <Component Id="ApplicationFiles" Guid="912D60FF-5488-4F23-B730-B6BA76000512">
                   <File Id="ApplicationFile1" Source="bin/Net4.6/Release/HelloCSharpConsole.exe"/>
                </Component>
             </Directory>
