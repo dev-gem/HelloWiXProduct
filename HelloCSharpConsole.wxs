@@ -13,7 +13,15 @@
          <Directory Id="ProgramFilesFolder">
             <Directory Id="INSTALLDIR" Name="HelloCSharpConsole">
                <Component Id="ApplicationFiles" Guid="912D60FF-5488-4F23-B730-B6BA76000512">
-                  <File Id="ApplicationFile1" Source="bin/Net4.6/Release/HelloCSharpConsole.exe"/>
+                  <File Id="executable" Source="bin/Net4.6/Release/HelloCSharpConsole.exe"/>
+               </Component>
+               <Component Id="RegistryEntries" Guid="62ec1038-67b0-4528-b5dc-655bcf8fd5f3">
+                  <RegistryKey Root="HKLM" 
+                               Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\AimData" 
+                               Action="createAndRemoveOnUninstall">
+                     <RegistryValue Type="string" Name="InstallLocation" Value="[INSTALLDIR]" />
+                     <RegistryValue Type="string" Name="Version" Value="0.0.1" />
+                  </RegistryKey>
                </Component>
             </Directory>
          </Directory>
@@ -21,6 +29,7 @@
  
       <Feature Id="DefaultFeature" Level="1">
          <ComponentRef Id="ApplicationFiles"/>
+         <ComponentRef Id="RegistryEntries" />
       </Feature>
    </Product>
 </Wix>
