@@ -17,7 +17,7 @@
                </Component>
                <Component Id="RegistryEntries" Guid="62ec1038-67b0-4528-b5dc-655bcf8fd5f3">
                   <RegistryKey Root="HKLM" 
-                               Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\AimData" 
+                               Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\HelloCSharpConsole" 
                                Action="createAndRemoveOnUninstall">
                      <RegistryValue Type="string" Name="InstallLocation" Value="[INSTALLDIR]" />
                      <RegistryValue Type="string" Name="Version" Value="0.0.1" />
